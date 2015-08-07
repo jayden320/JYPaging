@@ -1,8 +1,9 @@
 # JYPaging
-仿淘宝商品详情页上拉翻页效果
+Imitation TaoBao details page flip effect  仿淘宝商品详情页上拉翻页效果
 
 JYPaging is a simple tool for iOS.It's a category for UIScrollView.
-It use the MJRefresh which a powerfor refresh control.You can get the code from https://github.com/CoderMJLee/MJRefresh
+It use MJRefresh which a powerfor refresh control.
+You can get the code from https://github.com/CoderMJLee/MJRefresh
 
 <img src="https://github.com/huanxsd/JYPaging/blob/master/ScreenShot1.png" alt="ScreenShot1" title="ScreenShot1">
 <img src="https://github.com/huanxsd/JYPaging/blob/master/ScreenShot2.png" alt="ScreenShot2" title="ScreenShot2">
@@ -31,4 +32,4 @@ email 67111677@qq.com
 
 ## License
 
-AFNetworking is released under the MIT license. See LICENSE for details.
+JYPaging is released under the MIT license. See LICENSE for details.
