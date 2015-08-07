@@ -9,7 +9,7 @@
 #import <MJRefresh.h>
 #import "UIScrollView+JYPaging.h"
 
-static float kAnimationDuration = 0.25f;
+static const float kAnimationDuration = 0.25f;
 
 static const char jy_originContentHeight;
 static const char jy_secondScrollView;
