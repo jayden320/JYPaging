@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>57B29F0E-417F-40CE-ABF1-29F1BF8F2E47</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PagingDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1C9B20B5BA3FBF0E0EAB39F2965343E9E02BE835</key>
+		<string>https://github.com/huanxsd/JYPaging.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PagingDemo.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1C9B20B5BA3FBF0E0EAB39F2965343E9E02BE835</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/huanxsd/JYPaging.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1C9B20B5BA3FBF0E0EAB39F2965343E9E02BE835</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1C9B20B5BA3FBF0E0EAB39F2965343E9E02BE835</string>
+			<key>IDESourceControlWCCName</key>
+			<string>JYPaging</string>
+		</dict>
+	</array>
+</dict>
+</plist>
