@@ -1,2 +1,2 @@
 language: objective-c
-script: xcodebuild -workspace PagingDemo.xcworkspace -scheme PagingDemo -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+script: xcodebuild -workspace PagingDemo.xcworkspace -scheme PagingDemo -sdk iphonesimulator ONLY_ACTIVE_ARCH=YES
