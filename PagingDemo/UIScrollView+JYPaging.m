@@ -77,7 +77,7 @@ static const char jy_secondScrollView;
     self.secondScrollView.header = header;
 }
 
-- (void)endFooterRefreshing 
+- (void)endFooterRefreshing {
     [self.footer endRefreshing];
     self.footer.hidden = YES;
     self.scrollEnabled = NO;
