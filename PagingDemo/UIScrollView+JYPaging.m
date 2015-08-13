@@ -17,7 +17,9 @@ static const char jy_secondScrollView;
 @interface UIScrollView()
 
 @property (nonatomic, assign) float originContentHeight;
+
 @end
+
 
 @implementation UIScrollView (JYPaging)
 
