@@ -1,2 +1,4 @@
 language: objective-c
-script: xcodebuild -workspace PagingDemo.xcworkspace -scheme PagingDemo -sdk iphonesimulator -arch i386 ONLY_ACTIVE_ARCH=NO
+script:
+  - xctool -workspace PagingDemo.xcworkspace -scheme PagingDemo -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO -arch i386
+  - xctool test -workspace PagingDemo.xcworkspace -scheme PagingDemo -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO -arch i386
