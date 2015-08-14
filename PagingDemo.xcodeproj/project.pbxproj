@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		48939091B1B3E1E7E9EF8872 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0AC05109950F533F6229E87 /* libPods.a */; };
-		6EE910931B742FE2006897ED /* UIScrollView+JYPaging.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE910921B742FE2006897ED /* UIScrollView+JYPaging.m */; };
+		6E06D8241B7DCD6600A644DC /* UIScrollView+JYPaging.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E06D8231B7DCD6600A644DC /* UIScrollView+JYPaging.m */; };
 		6EE9109A1B742FF2006897ED /* ProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE910951B742FF2006897ED /* ProductDetailViewController.m */; };
 		6EE9109B1B742FF2006897ED /* ProductDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EE910961B742FF2006897ED /* ProductDetailViewController.xib */; };
 		6EE9109C1B742FF2006897ED /* ProductInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE910981B742FF2006897ED /* ProductInfoViewController.m */; };
@@ -32,8 +32,8 @@
 
 /* Begin PBXFileReference section */
 		6A0E1B2D81211A480729AC91 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		6EE910911B742FE2006897ED /* UIScrollView+JYPaging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+JYPaging.h"; sourceTree = "<group>"; };
-		6EE910921B742FE2006897ED /* UIScrollView+JYPaging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+JYPaging.m"; sourceTree = "<group>"; };
+		6E06D8221B7DCD6600A644DC /* UIScrollView+JYPaging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+JYPaging.h"; path = "Paging/UIScrollView+JYPaging.h"; sourceTree = "<group>"; };
+		6E06D8231B7DCD6600A644DC /* UIScrollView+JYPaging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+JYPaging.m"; path = "Paging/UIScrollView+JYPaging.m"; sourceTree = "<group>"; };
 		6EE910941B742FF2006897ED /* ProductDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDetailViewController.h; sourceTree = "<group>"; };
 		6EE910951B742FF2006897ED /* ProductDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDetailViewController.m; sourceTree = "<group>"; };
 		6EE910961B742FF2006897ED /* ProductDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductDetailViewController.xib; sourceTree = "<group>"; };
@@ -141,8 +141,8 @@
 		6EEDCAFD1B7367D5000BC2EA /* Paging */ = {
 			isa = PBXGroup;
 			children = (
-				6EE910911B742FE2006897ED /* UIScrollView+JYPaging.h */,
-				6EE910921B742FE2006897ED /* UIScrollView+JYPaging.m */,
+				6E06D8221B7DCD6600A644DC /* UIScrollView+JYPaging.h */,
+				6E06D8231B7DCD6600A644DC /* UIScrollView+JYPaging.m */,
 			);
 			name = Paging;
 			sourceTree = "<group>";
@@ -300,10 +300,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E06D8241B7DCD6600A644DC /* UIScrollView+JYPaging.m in Sources */,
 				6EE9109C1B742FF2006897ED /* ProductInfoViewController.m in Sources */,
 				6EE9109A1B742FF2006897ED /* ProductDetailViewController.m in Sources */,
 				6EEDCADD1B736783000BC2EA /* AppDelegate.m in Sources */,
-				6EE910931B742FE2006897ED /* UIScrollView+JYPaging.m in Sources */,
 				6EEDCADA1B736783000BC2EA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
