@@ -104,14 +104,17 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     // 遇到这些情况就直接返回
-    if (!self.userInteractionEnabled || self.hidden) return;
+    if (!self.userInteractionEnabled) return;
     
+    // 这个就算看不见也需要处理
+    if ([keyPath isEqualToString:MJRefreshKeyPathContentSize]) {
+        [self scrollViewContentSizeDidChange:change];
+    }
+    
+    // 看不见
+    if (self.hidden) return;
     if ([keyPath isEqualToString:MJRefreshKeyPathContentOffset]) {
         [self scrollViewContentOffsetDidChange:change];
-    } else if ([keyPath isEqualToString:MJRefreshKeyPathContentSize]) {
-        [self scrollViewContentSizeDidChange:change];
-    } else if ([keyPath isEqualToString:MJRefreshKeyPathContentInset]) {
-        [self scrollViewContentInsetDidChange:change];
     } else if ([keyPath isEqualToString:MJRefreshKeyPathPanState]) {
         [self scrollViewPanStateDidChange:change];
     }
@@ -119,7 +122,6 @@
 
 - (void)scrollViewContentOffsetDidChange:(NSDictionary *)change{}
 - (void)scrollViewContentSizeDidChange:(NSDictionary *)change{}
-- (void)scrollViewContentInsetDidChange:(NSDictionary *)change{}
 - (void)scrollViewPanStateDidChange:(NSDictionary *)change{}
 
 #pragma mark - 公共方法
@@ -162,12 +164,18 @@
 #pragma mark 自动切换透明度
 - (void)setAutoChangeAlpha:(BOOL)autoChangeAlpha
 {
-    _autoChangeAlpha = autoChangeAlpha;
+    self.automaticallyChangeAlpha = autoChangeAlpha;
+}
+
+- (void)setAutomaticallyChangeAlpha:(BOOL)automaticallyChangeAlpha
+{
+    _automaticallyChangeAlpha = automaticallyChangeAlpha;
+    
     
     if (self.isRefreshing) return;
     
-    if (autoChangeAlpha) {
-         self.alpha = self.pullingPercent;
+    if (automaticallyChangeAlpha) {
+        self.alpha = self.pullingPercent;
     } else {
         self.alpha = 1.0;
     }
@@ -180,7 +188,7 @@
     
     if (self.isRefreshing) return;
     
-    if (self.isAutoChangeAlpha) {
+    if (self.isAutomaticallyChangeAlpha) {
         self.alpha = pullingPercent;
     }
 }

@@ -1,10 +1,10 @@
 PODS:
-  - MJRefresh (2.3.2)
+  - MJRefresh (2.4.5)
 
 DEPENDENCIES:
   - MJRefresh
 
 SPEC CHECKSUMS:
-  MJRefresh: 0f6f5e8387970607c26080b44058b229a23065d7
+  MJRefresh: 8f022877bfcb4132ce260422eee6835dce896edb
 
 COCOAPODS: 0.38.2

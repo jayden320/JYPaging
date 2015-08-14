@@ -65,9 +65,9 @@
     [super scrollViewContentSizeDidChange:change];
     
     // 内容的高度
-    CGFloat contentHeight = self.scrollView.mj_contentH + self.ignoredScrollViewContentInsetTop;
+    CGFloat contentHeight = self.scrollView.mj_contentH + self.ignoredScrollViewContentInsetBottom;
     // 表格的高度
-    CGFloat scrollHeight = self.scrollView.mj_h - self.scrollViewOriginalInset.top - self.scrollViewOriginalInset.bottom + self.ignoredScrollViewContentInsetTop;
+    CGFloat scrollHeight = self.scrollView.mj_h - self.scrollViewOriginalInset.top - self.scrollViewOriginalInset.bottom + self.ignoredScrollViewContentInsetBottom;
     // 这里一定是用：self.scrollView.mj_insetT 和 self.scrollViewOriginalInset.bottom;
     // 设置位置和尺寸
     self.mj_y = MAX(contentHeight, scrollHeight);
@@ -85,21 +85,20 @@
                 self.scrollView.mj_insetB -= self.lastBottomDelta;
                 
                 // 自动调整透明度
-                if (self.isAutoChangeAlpha) self.alpha = 0.0;
+                if (self.isAutomaticallyChangeAlpha) self.alpha = 0.0;
             } completion:^(BOOL finished) {
                 self.pullingPercent = 0.0;
             }];
         }
         
         CGFloat deltaH = [self heightForContentBreakView];
-        NSInteger currentCount = [self totalDataCountInScrollView];
         // 刚刷新完毕
-        if (MJRefreshStateRefreshing == oldState && deltaH > 0 && currentCount != self.lastRefreshCount) {
+        if (MJRefreshStateRefreshing == oldState && deltaH > 0 && self.scrollView.totalDataCount != self.lastRefreshCount) {
             self.scrollView.mj_offsetY = self.scrollView.mj_offsetY;
         }
     } else if (state == MJRefreshStateRefreshing) {
         // 记录刷新前的数量
-        self.lastRefreshCount = [self totalDataCountInScrollView];
+        self.lastRefreshCount = self.scrollView.totalDataCount;
         
         [UIView animateWithDuration:MJRefreshFastAnimationDuration animations:^{
             CGFloat bottom = self.mj_h + self.scrollViewOriginalInset.bottom;
@@ -145,24 +144,5 @@
     } else {
         return - self.scrollViewOriginalInset.top;
     }
-}
-
-- (NSInteger)totalDataCountInScrollView
-{
-    NSInteger totalCount = 0;
-    if ([self.scrollView isKindOfClass:[UITableView class]]) {
-        UITableView *tableView = (UITableView *)self.scrollView;
-        
-        for (NSInteger section = 0; section<tableView.numberOfSections; section++) {
-            totalCount += [tableView numberOfRowsInSection:section];
-        }
-    } else if ([self.scrollView isKindOfClass:[UICollectionView class]]) {
-        UICollectionView *collectionView = (UICollectionView *)self.scrollView;
-        
-        for (NSInteger section = 0; section<collectionView.numberOfSections; section++) {
-            totalCount += [collectionView numberOfItemsInSection:section];
-        }
-    }
-    return totalCount;
 }
 @end

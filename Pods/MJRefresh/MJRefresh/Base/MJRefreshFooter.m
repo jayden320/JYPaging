@@ -35,6 +35,24 @@
     
     // 设置自己的高度
     self.mj_h = MJRefreshFooterHeight;
+    
+    // 默认是自动隐藏
+    self.automaticallyHidden = YES;
+}
+
+
+- (void)scrollViewContentSizeDidChange:(NSDictionary *)change
+{
+    [super scrollViewContentSizeDidChange:change];
+    
+    if (self.isAutomaticallyHidden) {
+        self.hidden = (self.scrollView.totalDataCount == 0);
+    }
+}
+
+- (void)setAutomaticallyHidden:(BOOL)automaticallyHidden
+{
+    _automaticallyHidden = automaticallyHidden;
 }
 
 #pragma mark - 公共方法
