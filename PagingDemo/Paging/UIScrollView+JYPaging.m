@@ -98,13 +98,16 @@ static const char jy_secondScrollView;
     self.secondScrollView.header.hidden = YES;
     self.secondScrollView.scrollEnabled = NO;
     
-    self.footer.hidden = NO;
     self.scrollEnabled = YES;
     
     [UIView animateWithDuration:kAnimationDuration animations:^{
         self.contentInset = UIEdgeInsetsMake(0, 0, self.footer.frame.size.height, 0);
     }];
     self.contentSize = CGSizeMake(0, self.originContentHeight);
+    
+    [self setContentOffset:CGPointZero animated:YES];
+    
+    [self addFirstScrollViewFooter];
 }
 
 @end
