@@ -23,13 +23,6 @@ If you found a bug, and can provide steps to reliably reproduce it, open an issu
 If you have a feature request, open an issue.
 If you want to contribute, submit a pull request
 
-## Contact
-
-You can contact me by 
-QQ 67111677 
-or 
-email 67111677@qq.com
-
 ## License
 
 JYPaging is released under the MIT license. See LICENSE for details.
